@@ -12,6 +12,19 @@
 //
 //= require jquery
 // require jquery.turbolinks
+//= require materialize-sprockets
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+
+(function($){
+  $(function(){
+    $('.button-main-nav').sideNav({
+      menuWidth: 240, // Default is 240
+      closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
+    }
+  );
+  $('.collapsible').collapsible();
+  }); // end of document ready
+})(jQuery); // end of jQuery name space

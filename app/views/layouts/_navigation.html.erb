@@ -1,0 +1,42 @@
+<nav class="nav-wrapper blue">
+
+  <ul class="right hide-on-med-and-down">
+      <li>
+        <a class="dropdown-button" href="#!" data-activates="dropdown-user">
+          <i class="material-icons left">face</i>
+          <% if user_signed_in? %>
+            <%= @user.first_name %>
+          <% else %>
+            Guest
+          <% end %>
+          <i class="material-icons right">arrow_drop_down</i>
+        </a>
+        <ul id="dropdown-user" class="dropdown-content">
+          <% if user_signed_in? %>
+          <li><%= link_to 'View Profile', edit_user_registration_path, class: "blue-text text-darken-2" %></li>
+          <li><a href="#" class="blue-text text-darken-2">My Portfolios</a></li>
+          <li><a href="#" class="blue-text text-darken-2">Admin Controls</a></li>
+          <li><%= link_to 'Log out', destroy_user_session_path, class: "blue-text text-darken-2", method: :delete %></li>
+          <% else %>
+          <li><%= link_to 'Log In', new_user_session_path, class: "blue-text text-darken-2" %></li>
+          <li><%= link_to 'Sign Up', new_user_registration_path, class: "blue-text text-darken-2" %></li>
+          <% end %>
+        </ul>
+
+
+      </li>
+  </ul>
+
+  <ul><a href="#" data-activates="slide-out" class="button-main-nav"><i class="material-icons">reorder</i></a></ul>
+  <ul id="slide-out" class="side-nav">
+    <li class="no-padding">
+      <li class="center black-text"><%= Time.now.strftime('%v') %></li>
+      <liv class="divider"></liv>
+      <li class="bold active"><a href="#!" class=""><i class="material-icons left">home</i>Home</a></li>
+      <li class="bold"><a href="#!" class=""><i class="material-icons left">pie_chart</i>Analyser</a></li>
+      <li class="bold"><a href="#!" class=""><i class="material-icons left">grain</i>Live</a></li>
+      <li class="bold"><a href="#!" class=""><i class="material-icons left">local_library</i>Explain</a></li>
+      <li class="bold"><a href="#!" class=""><i class="material-icons left">insert_comment</i>Blog</a></li>
+    </li>
+  </ul>
+</nav>
