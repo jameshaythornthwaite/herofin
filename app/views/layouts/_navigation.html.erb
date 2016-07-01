@@ -32,11 +32,26 @@
     <li class="no-padding">
       <li class="center black-text"><%= Time.now.strftime('%v') %></li>
       <liv class="divider"></liv>
-      <li class="bold active"><a href="#!" class=""><i class="material-icons left">home</i>Home</a></li>
-      <li class="bold"><a href="#!" class=""><i class="material-icons left">pie_chart</i>Analyser</a></li>
-      <li class="bold"><a href="#!" class=""><i class="material-icons left">grain</i>Live</a></li>
-      <li class="bold"><a href="#!" class=""><i class="material-icons left">local_library</i>Explain</a></li>
-      <li class="bold"><a href="#!" class=""><i class="material-icons left">insert_comment</i>Blog</a></li>
+      <li class="bold"><%= link_to root_path do %>
+        <i class="material-icons left">home</i>Home
+        <% end %>
+      </li>
+      <li class="bold"><%= link_to root_path do %>
+        <i class="material-icons left">pie_chart</i>Analyser
+        <% end %>
+      </li>
+      <li class="bold"><%= link_to root_path do %>
+        <i class="material-icons left">grain</i>Live
+        <% end %>
+      </li>
+      <li class="bold"><%= link_to root_path do %>
+        <i class="material-icons left">local_library</i>Explain
+        <% end %>
+      </li>
+      <li class="bold"><%= link_to root_path do %>
+        <i class="material-icons left">insert_comment</i>Blog
+        <% end %>
+      </li>
     </li>
   </ul>
 </nav>

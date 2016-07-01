@@ -9,9 +9,8 @@
 </head>
 <body>
 
+<%= render "layouts/navigation" %>
 <main>
-  <%= render "layouts/navigation" %>
-
   <div class="container">
     <% flash.each do |key, value| %>
       <div class="alert alert-<%= key %>">
@@ -19,11 +18,10 @@
       </div>
     <% end %>
   </div>
-
-
   <%= yield %>
-
 </main>
+
 <%= render "layouts/footer" %>
+
 </body>
 </html>
